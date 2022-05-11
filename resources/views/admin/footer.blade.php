@@ -1,7 +1,5 @@
-{{ $year = date('y') }}
-
 <footer class="main-footer">
-    <strong>Copyright &copy; {{ $year }} <a href="https://adminlte.io">eShopping</a>.</strong>
+    <strong>Copyright &copy; {{ $year = date('Y') }} <a href="https://adminlte.io">eShopping</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
         <b>Version</b> 3.2.0

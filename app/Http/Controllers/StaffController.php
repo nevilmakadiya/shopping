@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class StaffController extends Controller
 {
-    // main dashboard
-    // public function mainDashboard()
-    // {
-    //     return view('staff.dashboard');
-    // }
 
     // staffLogin Page
     public function staffLogin()

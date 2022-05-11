@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// login controllers
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\allStaffController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ClientController;
+
 use Illuminate\Routing\RouteGroup;
 use Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider;
 
@@ -25,7 +28,7 @@ Route::get('/', function () {
 // -------------------- mainDashboard ----------------------------------
 Route::get('/mainDashboard', [AdminController::class, 'mainDashboard']);
 
-
+// -------------------- Login Section Start ----------------------------
 // -------------------- Admin Section ----------------------------------
 // adminLogin Page
 Route::get('/admin', [AdminController::class, 'adminLogin']);
@@ -51,3 +54,16 @@ Route::get('/userLogin', [ClientController::class, 'userLogin']);
 Route::post('/doUserLogin', [ClientController::class, 'doUserLogin']);
 // user Dashboard
 Route::get('/userDashboard', [ClientController::class, 'index']);
+// -------------------- Login Section End -----------------------------
+
+// -------------------- Staff Section Start ---------------------------
+// addStaff
+Route::get('/addStaff', [allStaffController::class, 'addStaff']);
+
+// addNewStaff
+Route::post('/addNewStaff', [allStaffController::class, 'addNewStaff']);
+
+// manageStaff
+Route::get('/manageStaff', [allStaffController::class, 'manageStaff']);
+
+// editStaff
