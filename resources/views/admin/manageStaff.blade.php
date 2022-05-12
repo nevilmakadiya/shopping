@@ -20,6 +20,9 @@
         </div><!-- /.container-fluid -->
     </div>
 
+    {{-- Edit Staff --}}
+    
+
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -48,18 +51,23 @@
                                 <tbody>
                                     @foreach ($staffArray as $item)
                                         <tr>
-                                            <td>{{ $item->firstName}}</td>
-                                            <td>{{ $item->lastName}}</td>
-                                            <td>{{ $item->email}}</td>
-                                            <td>{{ $item->contact}}</td>
-                                            <td>{{ $item->status}}</td>
-                                            <td>{{ $item->role}}</td>
-                                            <td>{{ $item->permission}}</td>
-                                            <td>{{ $item->login_at}}</td>
-                                            <td>{{ $item->logout_at}}</td>
+                                            <td>{{ $item->firstName }}</td>
+                                            <td>{{ $item->lastName }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->contact }}</td>
+                                            <td>{{ $item->status }}</td>
+                                            <td>{{ $item->role }}</td>
+                                            <td>{{ $item->permission }}</td>
+                                            <td>{{ $item->login_at }}</td>
+                                            <td>{{ $item->logout_at }}</td>
                                             <td>
-                                                <a href="editStaff/" class="btn btn-success btn-sm fas fa-edit"> Edit</a>
-                                                <a href="deleteStaff" class="btn btn-success btn-sm fas fa-trash-alt"> Delete</a>
+                                                {{-- <button type="button" id="editStaffModal"
+                                                    class="btn btn-success btn-sm fas fa-edit" data-toggle="modal"
+                                                    data-target="#editStaffModal">Edit</button> --}}
+                                                <a href="editStaff/{{ $item->id }}"
+                                                    class="btn btn-success btn-sm fas fa-edit">Edit</a>
+                                                <a href="deleteStaff/{{ $item->id }}"
+                                                    class="btn btn-danger btn-sm fas fa-trash-alt"> Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

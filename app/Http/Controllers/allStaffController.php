@@ -35,6 +35,18 @@ class allStaffController extends Controller
         return view('admin.manageStaff')->with('staffArray', allStaff::all());
     }
 
+    // deleteStaff
+    public function destroy(allStaff $allStaff, $id)
+    {
+        allStaff::destroy(array('id', $id));
+        return redirect('manageStaff');
+    }
+
+    public function editStaff(allStaff $allStaff)
+    {
+        return view('admin.editStaff');
+    }
+
     // public function addNewStaff(Request $request)
     // {
     //     $result = new allStaffController;

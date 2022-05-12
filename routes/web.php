@@ -67,3 +67,8 @@ Route::post('/addNewStaff', [allStaffController::class, 'addNewStaff']);
 Route::get('/manageStaff', [allStaffController::class, 'manageStaff']);
 
 // editStaff
+Route::get('/editStaff', [allStaffController::class, 'editStaff']);
+
+// deleteStaff
+Route::get('/deleteStaff/{id}', [allStaffController::class, 'destroy']);
+
